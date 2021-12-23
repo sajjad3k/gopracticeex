@@ -7,13 +7,13 @@ type Node struct {
 	next  *Node
 }
 
-type Singlelinkedlist struct {
+type doublylinkedlist struct {
 	count int
 	head  *Node
 	tail  *Node
 }
 
-func (l *Singlelinkedlist) Append(s string) {
+func (l *doublylinkedlist) Append(s string) {
 
 	n := &Node{value: s}
 
@@ -33,12 +33,12 @@ func (l *Singlelinkedlist) Append(s string) {
 
 }
 
-func (l *Singlelinkedlist) Size() (count int) {
+func (l *doublylinkedlist) Size() (count int) {
 	c := l.count
 	return c
 }
 
-func (l *Singlelinkedlist) Print() {
+func (l *doublylinkedlist) Print() {
 	current := l.head
 	fmt.Printf("%+v\n", current.value)
 	for current.next != nil {
@@ -49,7 +49,7 @@ func (l *Singlelinkedlist) Print() {
 
 func main() {
 
-	k := Singlelinkedlist{}
+	k := doublylinkedlist{}
 	values := []string{"ser", "frt", "ghy", "yuo", "lop"}
 
 	for _, v := range values {
